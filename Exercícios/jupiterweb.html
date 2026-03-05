@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JupiterWeb 2.0</title>
+    <style>
+        .topo {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 15vw;
+            height: 15vw;
+        }
+
+        .banner {
+            width: 100%;
+            height: 3vw;
+        }
+
+        #b1 {
+            margin-top: 1vw;
+            background-color: rgb(151, 209, 231);
+        }
+
+        #b2 {
+            background-color: rgb(243, 188, 70);
+            height: 1vw;
+        }
+
+        .corpo {
+            display: flex;
+            background-color: rgb(184, 179, 179);
+        }
+
+        .mensagem {
+            margin: 5vw;
+            padding: 5vw;
+            font-size: 3vw;
+        }
+
+        .login {
+            display: flex;
+            flex-direction: column;
+            margin: 3vw;
+            padding: 3vw;
+        }
+        
+        .input {
+            font-size: 10vw;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="topo">
+        <img src="usplogo.jpg" class="logo">
+        <a class="banner" id="b1"></a>
+        <a class="banner" id="b2"></a>
+    </div>
+
+    <div class="corpo">
+        <h1 class="mensagem"> Bem vindo ao novo JupiterWeb! </h1>
+        <form class="login">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Senha">
+            <input type="submit">
+        </form>
+    </div>
+</body>
+</html>
