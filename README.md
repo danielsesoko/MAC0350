@@ -2,4 +2,4 @@
 
 ## Daniel Yugo Sesoko
 
-Os exercícios feitos em sala podem ser encontrados na pasta "Exercícios".
+Os exercícios feitos em sala/casa podem ser encontrados na pasta "Exercícios".
