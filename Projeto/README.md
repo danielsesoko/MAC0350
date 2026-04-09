@@ -22,3 +22,11 @@ A ideia da página é ser simples e intuitiva.
 
 O projeto vai ser desenvolvido por mim, seguindo os propósitos da disciplina MAC0350.
 
+### Como testar
+
+Crie um ambiente virtual e rode o pip install dos requirements.txt. Em seguida, utilize o fastapi dev para testar.
+
+### Uso de IA
+
+Foi utilizado para auxiliar no front-end, especialmente na estilização de botões e dos forms
+
