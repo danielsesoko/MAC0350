@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
+
+    <title>Renata Wassermann's Home Page</title>
+
+    <style>
+        body {
+            background-color: rgb(187, 177, 120);
+            font-family: "Fredoka";
+        }
+
+        .banner {
+            background-color: rgb(49, 48, 48);
+            width: 100%;
+            height: 3vh;
+            margin: 1vh 0;
+        } 
+
+        .renata {
+            max-height: 50vh;
+            width: auto;
+        }
+
+        .corpo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav a{
+            color: black;
+            text-decoration: none;
+            font-size: 3vh
+        }
+
+        nav a:hover {
+            color: white
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            gap: 5vw;
+        }
+
+        .caixa-texto {
+            background-color:  rgb(49, 48, 48);
+            border-radius: 2vw; 
+            padding: 2vh 2vw;
+            margin: 2vh;    
+            color: rgb(187, 177, 120);
+        }
+    </style>
+</head>
+<body>
+    <h1>Renata Wassermann's Home Page</h1>
+
+    <div class="banner"></div>
+
+    <div class="corpo">
+        <nav>
+            <ul>
+                <li><a href="#sobre">About Me</a></li>
+                <li><a href="#contato">How to Contact Me</a></li>
+                <li><a href="#publicacoes">Publications</a></li>
+            </ul>
+        </nav>
+        <img src="renata.jpeg" class="renata">
+    </div>
+
+    <div class="caixa-texto">
+        <h2 id="sobre"><strong>About Me</strong></h2>
+        <p>
+            Associate Professor at the <a href="http://www.ime.usp.br/mac">Computer
+            Science Department</a> of the <a href="http://www.ime.usp.br/">Institute
+            of Mathematics and Statistics</a> of the <a href="http://www.usp.br/">University
+            of S&atilde;o Paulo</a>
+        </p>
+        <p>
+            Member of the research group in Logic, Artificial Intelligence and
+          Formal Methods (<a href="http://www.ime.usp.br/%7Eliamf">LIAMF</a>)
+        </p>
+        <p>Researcher at the Center for Artificial Intelligence (<a href="http://c4ai.inova.usp.br/">C4AI</a>)</p>
+        <p>Member of the director board of <a href="https://lawgorithm.com.br/en/about-us/">Lawgorithm</a></p>
+    </div>
+
+    <div class="caixa-texto">
+        <h2 id="contato"> <strong>How to Contact Me</strong></h2>
+        <p><br>
+          Departamento de Ci&ecirc;ncia da Computa&ccedil;&atilde;o <br>
+          Instituto de Matem&aacute;tica e Estat&iacute;stica <br>
+          Universidade de S&atilde;o Paulo (USP) <br>
+          Rua do Mat&atilde;o 1010 - Cidade Universit&aacute;ria <br>
+          05508-090 S&atilde;o Paulo - SP <br>
+          phone: +55-11-30919687 (office) <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          +55-11-30916135 (secr.) <br>
+          e-mail:<i><a href="mailto:renata%20%27at%27%20ime.usp.br">renata 'at'
+              ime.usp.br</a></i> </p>
+    </div>
+
+    <div class="caixa-texto">
+        <h2 id="publicacoes"><strong>Publications</strong></h2>
+        <p><br>
+        <a href="https://dblp.org/pid/w/RenataWassermann.html">DBLP</a></p>
+        <p><a href="https://scholar.google.com/citations?user=_CyspwkAAAAJ&amp;hl=en&amp;oi=ao">Scholar
+        <br></a></p>
+        <p><a href="http://orcid.org/0000-0001-8065-1433">ORCID</a></p>
+        <p><a href="http://lattes.cnpq.br/8548608291351316">Lattes (in Portuguese)</a><br>
+        </p>
+    </div>
+</body>
+</html>

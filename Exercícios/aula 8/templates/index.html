@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 8</title>
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
+
+<body>
+    <h1>Curtidas, Jupiter e Renata</h1>
+
+    <nav>
+        <button hx-get="/home/curtidas" hx-target="main" hx-push-url="true">
+            Curtidas
+	    {% if pagina == '/home/curtidas' %} (Essa) {% endif %}
+        </button>
+
+        <button hx-get="/home/jupiter" hx-target="main" hx-push-url="true">
+            Júpiter
+	    {% if pagina == '/home/jupiter' %} (Essa) {% endif %}
+        </button>
+
+        <button hx-get="/home/renata" hx-target="main" hx-push-url="true">
+            Professor
+	    {% if pagina == '/home/renata' %} (Essa) {% endif %}
+        </button>
+
+    </nav>
+
+    <main hx-get="{{ pagina }}"
+          hx-target="main"
+          hx-trigger="load"
+          hx-push-url="true">
+    </main>
+
+    <div hx-get="/home/jupiter" 
+         hx-target="main" 
+         hx-trigger="keyup[shiftKey&&altKey&&key=='P'] from:body"
+         hx-push-url="true">
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <title>Sistema de Alunos</title>
+</head>
+<body>
+    <h1>Meu Site</h1>
+    <p>Bem vindo ao meu site!</p>
+    
+    <nav>
+        <button hx-get="/lista" hx-target="main" hx-push-url="true">
+            Lista de alunos
+        </button>
+        <button hx-get="/editarAlunos" hx-target="main" hx-push-url="true">
+            Editar lista de alunos
+        </button>
+    </nav>
+    <hr>
+    
+    <main hx-get="{{ pagina }}"
+          hx-target="main"
+          hx-trigger="load"
+          hx-push-url="true">
+    </main>
+</body>
+</html>
