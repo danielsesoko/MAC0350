@@ -1,6 +1,7 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Query
 from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
+from typing import Optional
 
 app = FastAPI()
 
@@ -167,14 +168,21 @@ class User(BaseModel):
 
 users = []
 
-@app.post("/users/")
+@app.post("/users")
 async def add_user(user: User):
     users.append(user)
+    return user.nome
 
-@app.get("/users/")
-async def read_users():
+@app.get("/users")
+async def read_users(index: Optional[int] = Query(None)):
+    if index is not None:
+        try: 
+            return users[index]
+        except IndexError:
+            return "Erro!"
     return users
 
-@app.delete("/users/")
+@app.delete("/users")
 async def delete_users():
     users.clear()
+    return "Vapo"

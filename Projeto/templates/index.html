@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+
+    <title> AchadUSPerdidos </title>
+
+    <style>
+        body {
+            background-color: rgb(187, 177, 120);
+            font-family: "Fredoka";
+        }
+
+        .banner {
+            background-color: rgb(49, 48, 48);
+            width: 100%;
+            height: 3vh;
+            margin: 1vh 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 4vh 0;
+        }
+
+        main, .container {
+            width: 90vw; /* 90% da largura da tela no celular */
+            max-width: 500px; /* No PC, ele trava em 500px e não cresce mais */
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        button {
+            font-family: "Fredoka", sans-serif;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: rgb(187, 177, 120);
+            background-color: rgb(49, 48, 48);
+            border: none;
+            padding: 15px 30px; 
+            border-radius: 50px; 
+            cursor: pointer;
+        }
+
+        input, select {
+            font-family: "Fredoka", sans-serif;
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+        
+            border: 2px solid rgb(49, 48, 48);
+            border-radius: 15px;
+            background-color: #fff;
+            color: rgb(49, 48, 48);
+        
+            font-size: 1rem;
+            box-sizing: border-box; 
+            outline: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1> AchadUSPerdidos </h1>
+
+    <div class="banner"></div>
+
+    <nav>
+        <button hx-get="/editarItens" hx-target="main">Achei/editar um item</button>
+        <button hx-get="/lista" hx-target="main">Perdi um item</button>
+    </nav>
+
+    <main>
+        <p> Selecione uma opção. </p>
+    </main>
+</body>
+</html>

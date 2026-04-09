@@ -1,0 +1,51 @@
+<h2>Gerenciar Itens</h2>
+
+<div id="mensagem"></div>
+
+<div>
+    <h3>Registrar item Achado</h3>
+
+    <form hx-post="/itens" hx-target="#mensagem" hx-swap="innerHTML">
+
+        <select name="categoria_id" required>
+            <option value="">Categoria...</option>
+            {% for categoria in categorias %}
+                <option value="{{ categoria.id }}"> {{ categoria.nome }} </option>
+            {% endfor %}
+        </select>
+
+        <input type="text" name="cor" placeholder="Cor" required>
+        <input type="text" name="nome_pessoa" placeholder="Identificação (Opcional)">
+        <input type="text" name="local_encontrado" placeholder="Localização do item" required>
+
+        <select name="local_id" required>
+            <option value="">Local guardado...</option>
+            {% for local in locais %}
+                <option value="{{ local.id }}"> {{ local.nome }} </option>
+            {% endfor %}
+        </select>
+
+        <button type="submit">Salvar Item</button>
+
+    </form>
+</div>
+
+<div>
+    <h3>Marcar item como Recuperado</h3>
+    <form hx-put="/itens" hx-target="#mensagem" hx-swap="innerHTML">
+
+        <input type="number" name="id" placeholder="Insira o id" required>
+        <button type="submit"> Atualizar Status </button>
+
+    </form>
+</div>
+
+<div>
+    <h3>Deletar item Achado</h3>
+    <form hx-delete="/itens" hx-target="#mensagem" hx-swap="innerHTML">
+
+        <input type="number" name="id" placeholder="Insira o id" required>
+        <button type="submit">Deletar Item</button>
+
+    </form>
+</div>

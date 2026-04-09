@@ -1,0 +1,31 @@
+<h2> Buscar items perdidos na USP </h2>
+
+<input type="text"
+       name="busca"
+       placeholder="Buscar por categoria, cor, nome ou local..."
+       hx-get="/lista"
+       hx-target="main"
+       hx-trigger="input changed delay:500ms">
+
+<div id="lista">
+    <ul>
+        {% for item in itens %}
+            <li>
+                <strong> ID: </strong> {{ item.id }} | 
+                <strong> Categoria: </strong> {{ item.categoria.nome }} | 
+                <strong> Cor: </strong> {{ item.cor }} | 
+
+                {% if item.nome_pessoa %}
+                    <strong> Nome: </strong> {{ item.nome_pessoa }} | 
+                {% endif %}
+
+                <strong> Encontrado: </strong> {{ item.local_encontrado }} | 
+                <strong> Guardado: </strong> {{ item.local.nome }} | 
+                <strong> Status:</strong> {{ item.status }}
+            </li>
+        {% else %}
+            <li> Nenhum item encontrado na base de dados. </li>
+
+        {% endfor %}
+    </ul>
+</div>
